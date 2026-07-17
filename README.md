@@ -1,4 +1,18 @@
-# chrome-discord-bridge
+# chrome-discord-bridge (band-hopper fork)
+
+This is a fork of [p00ya/chrome-discord-bridge](https://github.com/p00ya/chrome-discord-bridge)
+(Apache-2.0), maintained for the
+[band-hopper](https://github.com/udondon1478/band-hopper) Chrome extension's
+Discord Rich Presence integration.
+
+The only change from upstream is `cmd/chrome-discord-bridge/origins.txt`,
+which allow-lists band-hopper's fixed extension ID
+(`kaabkdalidnfbjjmbifgcnooikgkghkb`, set via `manifest.json`'s `key`) instead
+of upstream's Browser Activity extension IDs. Releases here are prebuilt
+binaries built by GitHub Actions (see `.github/workflows/release.yml`) so
+band-hopper users can install without a local Go toolchain.
+
+---
 
 chrome-discord-bridge acts as a "Chrome native messaging host", and forwards Chrome "native messages" to Discord's IPC socket.
 
